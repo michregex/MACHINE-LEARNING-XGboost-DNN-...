@@ -9,7 +9,7 @@ library(tfruns)
 library(vip)
 
 # carica i dati 
-data <- readxl::read_xlsx("datiquestionario.xlsx")
+data <- readxl::read_xlsx("datiquestionario2.xlsx")
 data <- clean_names(data)
 data <- data[, -c(1, 6)]
 data <- data %>% mutate(across(where(is.character), factor)) 
